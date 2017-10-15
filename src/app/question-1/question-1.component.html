@@ -1,0 +1,38 @@
+<div id="main-1">
+  <section id="top-row">
+    <div class="question ratio-1 animated fadeInLeft" id="white">
+      <p>Avez vous déjà travailé avec une personne atteinte d’un handicap
+        psychique ?</p>
+    </div>
+  </section>
+  <section id="bottom-row">
+    <div *ngIf="!answerSelected">
+      <div (click)="onSelect()"  class="answer-1 ratio-2 animated fadeInDown answer-green answer" id="green">
+        <p>
+          Oui
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-2 ratio-2 animated fadeInDown answer-red answer" id="red">
+        <p>
+          Non
+        </p>
+      </div>
+    </div>
+    <div *ngIf="answerSelected">
+      <div class="question ratio-1 animated fadeInUp" id="gray">
+        <p>
+          C’est sûr que oui !<br>
+          Une personne sur 4 est concernée, quel que soit son milieu social ou
+          professionnel.
+          Cela peut etre votre collègue, votre supérieur hierarchique… ou vous-même !
+          <br><br>
+          <a routerLink="/question-2"><img class="chevron animated flash infinite" src="assets/img/chevron-down.svg"></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="navigation" class="animated fadeInRight">
+    <app-navigation></app-navigation>
+  </section>
+</div>

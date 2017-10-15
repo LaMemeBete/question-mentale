@@ -1,0 +1,45 @@
+<div id="main-1">
+  <section id="top-row">
+    <div class="question ratio-1 animated fadeInLeft" id="white">
+      <p>Quel est le facteur qui améliore le plus le quotidien d’une personne atteinte
+        de trouble psychique</p>
+    </div>
+  </section>
+  <section id="bottom-row">
+    <div *ngIf="!answerSelected">
+      <div (click)="onSelect()" class="answer-1 ratio-3 animated fadeInDown answer-green answer" id="green">
+        <p>
+          la prise régulière de médicaments
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-2 ratio-3 animated fadeInDown answer-red answer" id="red">
+        <p>
+          le fait de ne pas avoir à le cacher
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-3 ratio-3 animated fadeInDown answer-yellow answer" id="yellow">
+        <p>
+          avoir plus de temps pour soi
+        </p>
+      </div>
+    </div>
+    <div *ngIf="answerSelected">
+      <div class="question ratio-1 animated fadeInUp" id="gray">
+        <p>
+          Quand le trouble psychique n’est plus un tabou, tout le monde va déjà mieux !
+          <br>
+          Cacher un trouble psychique peut demander beaucoup d’effort et d’énergie à
+          la personne concernée. Oser en parler lui permettra d’etre plus épanoui et plus
+          performante au travail.
+          <br><br>
+          <a routerLink="/question-8">
+            <img class="chevron animated flash infinite" src="assets/img/chevron-down.svg">
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="navigation" class="animated fadeInRight">
+    <app-navigation></app-navigation>
+  </section>
+</div>

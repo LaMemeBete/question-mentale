@@ -1,0 +1,40 @@
+<div id="main-1">
+  <section id="top-row">
+    <div class="question ratio-1 animated fadeInLeft" id="white">
+      <p>Finalement, le handicap psychique dans l’entreprise</p>
+    </div>
+  </section>
+  <section id="bottom-row">
+    <div *ngIf="!answerSelected">
+      <div (click)="onSelect()" class="answer-1 ratio-2 animated fadeInDown answer-green answer" id="green">
+        <p>
+          Il ne faut pas en parler, car cela relève de la vie privée de chacun
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-2 ratio-2 animated fadeInDown answer-red answer" id="red">
+        <p>
+          Il ne faut pas hésiter à en parler, car sa prise en compte peut améliorer la
+          qualité de vie au travail de chacun.
+        </p>
+      </div>
+    </div>
+    <div *ngIf="answerSelected">
+      <div class="question ratio-1 animated fadeInUp" id="gray">
+        <p>
+          Dans tous les cas, oser en parler permet toujours d’avancer !
+          <br>
+          Au sein de l’entreprise, des contacts privilégiés existent : la médecine du
+          travail ou l’équipe des Ressources Humaines, qui seront à l’écoute en toute
+          confidentialité.
+          <br><br>
+          <a routerLink="/question-8">
+            <img class="chevron animated flash infinite" src="assets/img/chevron-down.svg">
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="navigation" class="animated fadeInRight">
+    <app-navigation></app-navigation>
+  </section>
+</div>

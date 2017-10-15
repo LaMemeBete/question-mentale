@@ -1,0 +1,41 @@
+<div id="main-1">
+  <section id="top-row">
+    <div class="question ratio-1 animated fadeInLeft" id="white">
+      <p>Parler du handicap psychique dans l’entreprise, c’est d’abord une question</p>
+    </div>
+  </section>
+  <section id="bottom-row">
+    <div *ngIf="!answerSelected">
+      <div (click)="onSelect()" class="answer-1 ratio-3 animated fadeInDown answer-green answer" id="green">
+        <p>
+          de sécurité
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-2 ratio-3 animated fadeInDown answer-red answer" id="red">
+        <p>
+          de santé
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-3 ratio-3 animated fadeInDown answer-yellow answer" id="yellow">
+        <p>
+          de qualité de vie au travail
+        </p>
+      </div>
+    </div>
+    <div *ngIf="answerSelected">
+      <div class="question ratio-1 animated fadeInUp" id="gray">
+        <p>
+          Avant tout de santé !
+          <br>
+          Il s’agit de la 2e cause d’arrêt maladie, et la 1ere cause d’invalidité.
+          <br><br>
+          <a routerLink="/question-4">
+            <img class="chevron animated flash infinite" src="assets/img/chevron-down.svg"></a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="navigation" class="animated fadeInRight">
+    <app-navigation></app-navigation>
+  </section>
+</div>

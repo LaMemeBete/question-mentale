@@ -1,0 +1,40 @@
+<div id="main-1">
+  <section id="top-row">
+    <div class="question ratio-1 animated fadeInLeft" id="white">
+      <p>Dépression, bipolarité : le travail en entreprise est la cause de
+        l’augmentation des troubles psychiques.</p>
+    </div>
+  </section>
+  <section id="bottom-row">
+    <div *ngIf="!answerSelected">
+      <div (click)="onSelect()" class="answer-1 ratio-2 animated fadeInDown answer-green answer" id="green">
+        <p>
+          Cela s’explique par une exigence de productivité toujours accrue
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-2 ratio-2 animated fadeInDown answer-red answer" id="red">
+        <p>
+          Cela s’explique par la disparition du lien social dans l’entreprise
+        </p>
+      </div>
+    </div>
+    <div *ngIf="answerSelected">
+      <div class="question ratio-1 animated fadeInUp" id="gray">
+        <p>
+          Toutes ces idées sont fausses !
+          <br>
+          Les troubles psychiques n’augmentent pas ; notre société commence
+          simplement à y prêter davantage attention, car il s’agit d’un vrai sujet de santé
+          qui concerne toutes les catégories de population.
+          <br><br>
+          <a routerLink="/question-6">
+            <img class="chevron animated flash infinite" src="assets/img/chevron-down.svg">
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="navigation" class="animated fadeInRight">
+    <app-navigation></app-navigation>
+  </section>
+</div>

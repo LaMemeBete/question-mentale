@@ -1,0 +1,40 @@
+<div id="main-1">
+  <section id="top-row">
+    <div class="question ratio-1 animated fadeInLeft" id="white">
+      <p>Il est plus simple de travailler avec un collègue bon vivant qui a l’alcool
+        facile qu’avec un collègue schizophrène.</p>
+    </div>
+  </section>
+  <section id="bottom-row">
+    <div *ngIf="!answerSelected">
+      <div (click)="onSelect()" class="answer-1 ratio-2 animated fadeInDown answer-green answer" id="green">
+        <p>
+          Bien sûr que oui !
+        </p>
+      </div>
+      <div (click)="onSelect()" class="answer-2 ratio-2 animated fadeInDown answer-red answer" id="red">
+        <p>
+          Bien sûr que non !
+        </p>
+      </div>
+    </div>
+    <div *ngIf="answerSelected">
+      <div class="question ratio-1 animated fadeInUp" id="gray">
+        <p>
+          ça n’est pas forcément vrai !
+          <br>
+          L’addiction et la schizophrénie sont des troubles psychiques, tout comme
+          la depression ou les troubles alimentaires. La plupart du temps, aucun de
+          ces troubles n’empêche de travailler dans des conditions normales.
+          <br><br>
+          <a routerLink="/question-5">
+            <img class="chevron animated flash infinite" src="assets/img/chevron-down.svg">
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="navigation" class="animated fadeInRight">
+    <app-navigation></app-navigation>
+  </section>
+</div>
